@@ -1,4 +1,4 @@
-package com.example;
+package com.storagesearcher;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -14,26 +14,26 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Storage Searcher"
 )
-public class ExamplePlugin extends Plugin
+public class StorageSearcherPlugin extends Plugin
 {
 	@Inject
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private StorageSearcherConfig config;
 
 	@Override
 	protected void startUp() throws Exception
 	{
-		log.info("Example started!");
+		log.info("Storage Searcher started!");
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
-		log.info("Example stopped!");
+		log.info("Storage Searcher stopped!");
 	}
 
 	@Subscribe
@@ -41,13 +41,13 @@ public class ExamplePlugin extends Plugin
 	{
 		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
 		{
-			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " + config.greeting(), null);
+			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Storage Searcher says " + config.greeting(), null);
 		}
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
+	StorageSearcherConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ExampleConfig.class);
+		return configManager.getConfig(StorageSearcherConfig.class);
 	}
 }

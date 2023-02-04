@@ -1,13 +1,13 @@
-package com.example;
+package com.storagesearcher;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class StorageSearcherPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(ExamplePlugin.class);
+		ExternalPluginManager.loadBuiltin(StorageSearcherPlugin.class);
 		RuneLite.main(args);
 	}
 }
