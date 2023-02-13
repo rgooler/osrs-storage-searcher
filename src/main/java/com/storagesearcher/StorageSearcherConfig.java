@@ -16,4 +16,35 @@ public interface StorageSearcherConfig extends Config
 	{
 		return "Hello";
 	}
+
+
+	@ConfigItem(
+			keyName = "hideEmptyStorage",
+			name = "Hide Empty Storage",
+			description = "Automatically hide storage that has nothing in it"
+	)
+	default boolean hideEmptyStorage()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "showBank",
+			name = "Show Bank",
+			description = "Show the Bank storage"
+	)
+	default boolean showBank()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "showSeedBank",
+			name = "Show Seed Bank",
+			description = "Show Seed Bank storage from the Farming Guild"
+	)
+	default boolean showSeedBank()
+	{
+		return true;
+	}
 }
