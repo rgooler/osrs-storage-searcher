@@ -50,6 +50,10 @@ public class StorageSearcherPlugin extends Plugin
 	private NavigationButton navButton;
 	private StorageSearcherPluginPanel panel;
 	private static final BufferedImage ICON = ImageUtil.loadImageResource(StorageSearcherPlugin.class, "/icon.png");
+
+	public StorageSearcherPlugin() {
+	}
+
 	@Override
 	protected void startUp() throws Exception
 	{

@@ -8,8 +8,6 @@ import net.runelite.client.game.ItemManager;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.ui.overlay.tooltip.TooltipManager;
 import javax.swing.border.EmptyBorder;
-import net.runelite.client.ui.PluginPanel;
-import javax.swing.*;
 import java.awt.*;
 
 @Slf4j
